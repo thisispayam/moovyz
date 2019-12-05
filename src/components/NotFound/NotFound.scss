@@ -1,0 +1,12 @@
+@import '../../App.scss';
+.not-found {
+    color: $red;
+    font-size: 5rem;
+}
+
+.not-found+div {
+    display: none;
+    &+h1 {
+        display: none;
+    }
+}

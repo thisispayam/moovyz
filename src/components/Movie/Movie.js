@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { API_URL, API_KEY } from '../../config';
 import Actor from '../Actor/Actor';
 import Director from '../Director/Director';
@@ -7,6 +7,7 @@ import Trailer from '../Trailer/Trailer';
 import MovieThumbGrid from '../MovieThumbGrid/MovieThumbGrid';
 import Spinner from '../Spinner/Spinner';
 import './Movie.scss';
+import NotFound from '../NotFound/NotFound';
 
 class Movie extends Component {
     state = {
@@ -72,14 +73,18 @@ class Movie extends Component {
         return (
             <div className="movie">
                 {movie ?
-                    <div className='name'>
-                        <MovieInfo movie={movie} directors={directors} />
-                    </div>
-                    : null}
+                    <Fragment>
+                        <div className='name'>
+                            <MovieInfo movie={movie} directors={directors} />
+                        </div>
+                        <div className="trailer">
+                            <Trailer movieId={movieId} />
+                        </div>
+                    </Fragment>
+                   
+                    : <NotFound />}
                 {/* <iframe title= "trailerFrame" width="560" height="315" src={`https://www.youtube.com/embed/${key}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-                <div className="trailer">
-                    <Trailer movieId={movieId} />
-                </div>
+              
                 {directors ?
                     <div className="actor-grid">
                         <div className="container">
@@ -93,7 +98,7 @@ class Movie extends Component {
                         </MovieThumbGrid>
                     </div>
                     : null}
-                {!directors && !loading ? <h1>No director information found</h1> : null}
+                {!directors && !loading ? <h1 className="container">No director information found</h1> : null}
 
 
                 {actors ?
@@ -107,7 +112,7 @@ class Movie extends Component {
                     </div>
                     : null}
              
-                {!actors && !loading ? <h1>No movie found</h1> : null}
+                {!actors && !loading ? <h1 className="container">No movie found</h1>  : null}
                 {loading ? <Spinner /> : null}
             </div>
         )
