@@ -1,0 +1,50 @@
+@import './variables';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.item-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 120rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.learn-more {
+    background-color: $transparent-grey;
+    border-width: 0;
+    padding: 0.75em 2.3em;
+    height: auto;
+    border-radius: 0.2vw;
+    box-shadow: none;
+    font-size: 1.6rem;
+    margin: 4rem 0 !important;
+    max-width: 200px;
+    color: $white;
+    text-align: center;
+    border: 1px solid $white;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background: $black;
+    color: $white;
+}

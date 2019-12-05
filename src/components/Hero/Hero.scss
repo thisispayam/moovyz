@@ -1,0 +1,29 @@
+            @import '../../App.scss';
+            .hero {
+                height: 70vh;
+                background-size: 100%, cover !important;
+                background-position: top center !important;
+                width: 100%;
+                position: relative;
+                animation: animateHeroimage 1s;
+                display: flex;
+                margin: auto;
+                .hero-content {
+                    margin: auto 2em 1em 4em;
+                    display: flex;
+                    color: $white;
+                }
+                .hero-text {
+                    max-width: 70rem;
+                    p {
+                        margin: 2rem 0;
+                    }
+                }
+            }
+            
+            @media screen and (max-width: 720px) {
+                .hero {
+                    background-position: center center !important;
+                    background-size: 100%, cover !important;
+                }
+            }

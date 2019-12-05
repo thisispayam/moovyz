@@ -1,0 +1,43 @@
+@import '../../App.scss';
+.header {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        background: $black;
+        a {
+            text-decoration: none;
+            align-items: baseline;
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .logo {
+            p {
+                font-size: 3em;
+                position: relative;
+                color: $red;
+                ;
+                span {
+                    color: $white;
+                }
+                .r-pupil,
+                .l-pupil {
+                    position: absolute;
+                }
+                .r-pupil {
+                    right: 9.5rem;
+                    top: -1.2rem;
+                }
+                .l-pupil {
+                    left: 5.6rem;
+                    top: -1.2rem;
+                }
+            }
+            img {
+                display: flex;
+                max-width: 20rem;
+            }
+        }
+    }
+}

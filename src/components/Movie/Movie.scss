@@ -1,0 +1,13 @@
+.movie {
+    .trailer {
+        margin: 3rem auto;
+    }
+    .movie-grid,
+    .actor-grid {
+        margin: 2rem 0;
+        h1 {
+            margin: 3rem 0;
+            text-transform: uppercase;
+        }
+    }
+}
