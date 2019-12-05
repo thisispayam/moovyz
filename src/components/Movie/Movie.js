@@ -82,9 +82,9 @@ class Movie extends Component {
                         </div>
                     </Fragment>
                    
-                    : <NotFound />}
+                    : null}
                 {/* <iframe title= "trailerFrame" width="560" height="315" src={`https://www.youtube.com/embed/${key}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-              
+                {!actors && !loading ? <NotFound /> : null}
                 {directors ?
                     <div className="actor-grid">
                         <div className="container">
@@ -112,7 +112,6 @@ class Movie extends Component {
                     </div>
                     : null}
              
-                {!actors && !loading ? <h1 className="container">No movie found</h1>  : null}
                 {loading ? <Spinner /> : null}
             </div>
         )
