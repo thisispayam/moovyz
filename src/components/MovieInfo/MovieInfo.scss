@@ -64,6 +64,17 @@
     line-height: 26px;
 }
 
+.genres {
+    display: flex;
+    flex-direction: column;
+    &-items {
+        flex-direction: row;
+    }
+    .genre {
+        float: left;
+    }
+}
+
 .rating {
     width: 110px;
     max-width: 100%;

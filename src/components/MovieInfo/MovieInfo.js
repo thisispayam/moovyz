@@ -6,7 +6,7 @@ import MovieThumb from '../MovieThumb/MovieThumb';
 import './MovieInfo.scss';
 import MovieInfoBar from './MovieInfoBar';
 
-const MovieInfo = ({ movie, directors }) => (
+const MovieInfo = ({ movie}) => (
     <div className="movieinfo"
         style={{
             background: movie.backdrop_path ? `url('${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}')` : '#000'
@@ -28,11 +28,13 @@ const MovieInfo = ({ movie, directors }) => (
                     <meter min="0" max="100" optimum="100" low="40" high="70" value={movie.vote_average * 10}></meter>
                     <p className="score">{movie.vote_average}</p>
                 </div>
-                <div className="genre">
+                <div className="genres">
                     <h3>GENRE(S)</h3>
-                    {movie.genres.map((element, i) => {
-                        return <p key={i} className="genre">{element.name}</p>
-                    })}
+                    <div className='genres-items'>
+                        {movie.genres.map((element, i) => {
+                            return <p key={i} className="genre">{(i ? ', ' : '') + element.name }</p>
+                        })}
+                    </div>
                 </div>
                
                 <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue} release={movie.release_date} />
