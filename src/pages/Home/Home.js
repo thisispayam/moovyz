@@ -6,6 +6,8 @@ import MovieThumbGrid from '../../components/MovieThumbGrid/MovieThumbGrid';
 import MovieThumb from '../../components/MovieThumb/MovieThumb';
 import Spinner from '../../components/Spinner/Spinner';
 import LoadBtn from '../../components/Buttons/LoadBtn';
+import './Home.scss';
+
 class Home extends Component {
     state= {
         movies: [],
@@ -44,7 +46,7 @@ class Home extends Component {
             .then(result => {
                 this.setState({
                     movies: [...movies, ...result.results], // keep the old movies and append the ones when loading more
-                    heroImage: heroImage || result.results[0], //grabbing the first result
+                    heroImage: heroImage || result.results[1], //grabbing the first result
                     loading: false,
                     currentPage: result.page,
                     totalPages: result.total_pages
@@ -110,7 +112,7 @@ class Home extends Component {
                 </MovieThumbGrid>
                 {loading ? <Spinner /> : null}
                 {(currentPage <= totalPages && !loading) ?
-                    <LoadBtn text="Load Mored" onClick={this.loadMoreItems} />
+                    <LoadBtn text="Load More" onClick={this.loadMoreItems} />
                     : null
                 }
                 
