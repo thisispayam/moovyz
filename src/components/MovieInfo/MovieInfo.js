@@ -28,11 +28,14 @@ const MovieInfo = ({ movie, directors }) => (
                     <meter min="0" max="100" optimum="100" low="40" high="70" value={movie.vote_average * 10}></meter>
                     <p className="score">{movie.vote_average}</p>
                 </div>
-                {/* {directors.length > 1 ? <h3>DIRECTORS</h3> : <h3>DIRECTOR</h3>}
-                {directors.map((element, i) => {
-                    return <p key={i} className="director">{element.name}</p>
-                })} */}
-                <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue} />
+                <div className="genre">
+                    <h3>GENRE(S)</h3>
+                    {movie.genres.map((element, i) => {
+                        return <p key={i} className="genre">{element.name}</p>
+                    })}
+                </div>
+               
+                <MovieInfoBar time={movie.runtime} budget={movie.budget} revenue={movie.revenue} release={movie.release_date} />
             </div>
             
             <FontAwesome className="fa-film" name="film" size="5x" />

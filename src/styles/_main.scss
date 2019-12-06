@@ -52,3 +52,9 @@ body {
 button {
     cursor: pointer;
 }
+
+.grid-res {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}

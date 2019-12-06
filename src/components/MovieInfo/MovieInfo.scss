@@ -124,6 +124,7 @@ meter::-webkit-meter-even-less-good-value {
 
 @media screen and (max-width: 72rem) {
     .movieinfo {
+        height: auto;
         &-thumb {
             display: none;
         }
@@ -136,6 +137,11 @@ meter::-webkit-meter-even-less-good-value {
             }
         }
     }
+    // .movieinfobar {
+    //     &-content {
+    //         display: block;
+    //     }
+    // }
     .rating {
         width: 13.5rem;
     }
