@@ -7,6 +7,63 @@
     padding: 40px 20px;
     box-sizing: border-box;
     animation: animateMovieinfo 1s;
+    .movieinfo-thumb {
+        width: 350px;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+    }
+    &-content {
+        max-width: 1280px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.7);
+        position: relative;
+    }
+    &-text {
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100%;
+        width: auto;
+        padding: 40px;
+        color: #fff;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: absolute;
+        left: 360px;
+        .genres {
+            display: flex;
+            flex-direction: column;
+            &-items {
+                flex-direction: row;
+            }
+            .genre {
+                float: left;
+            }
+        }
+        .rating {
+            width: 110px;
+            max-width: 100%;
+            height: 20px;
+            margin-top: 20px;
+            position: relative;
+        }
+        h1 {
+            font-size: 4.8rem;
+            margin: 1rem 0;
+        }
+        h3 {
+            font-size: 16px;
+            line-height: 0;
+            margin: 3rem 0 1rem 0;
+            color: $yellow;
+        }
+        p {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
 }
 
 @keyframes animateMovieinfo {
@@ -16,71 +73,6 @@
     to {
         opacity: 1;
     }
-}
-
-.movieinfo-content {
-    max-width: 1280px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background: rgba(0, 0, 0, 0.7);
-    position: relative;
-}
-
-.movieinfo-thumb {
-    width: 350px;
-    height: 100%;
-    overflow: hidden;
-    position: absolute;
-    left: 0px;
-}
-
-.movieinfo-text {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    width: auto;
-    padding: 40px;
-    color: #fff;
-    overflow: hidden;
-    box-sizing: border-box;
-    position: absolute;
-    left: 360px;
-}
-
-.movieinfo-text h1 {
-    font-size: 4.8rem;
-    margin: 1rem 0;
-}
-
-.movieinfo-text h3 {
-    font-size: 16px;
-    line-height: 0;
-    margin: 3rem 0 1rem 0;
-    color: $yellow;
-}
-
-.movieinfo-text p {
-    font-size: 18px;
-    line-height: 26px;
-}
-
-.genres {
-    display: flex;
-    flex-direction: column;
-    &-items {
-        flex-direction: row;
-    }
-    .genre {
-        float: left;
-    }
-}
-
-.rating {
-    width: 110px;
-    max-width: 100%;
-    height: 20px;
-    margin-top: 20px;
-    position: relative;
 }
 
 .score {
@@ -106,7 +98,7 @@ meter {
 }
 
 meter::-webkit-meter-bar {
-    background: red;
+    background: $white;
     width: 200px;
 }
 
@@ -146,14 +138,9 @@ meter::-webkit-meter-even-less-good-value {
             h1 {
                 font-size: 3rem;
             }
+            .rating {
+                width: 13.5rem;
+            }
         }
-    }
-    // .movieinfobar {
-    //     &-content {
-    //         display: block;
-    //     }
-    // }
-    .rating {
-        width: 13.5rem;
     }
 }
