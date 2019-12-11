@@ -17,7 +17,7 @@ class Trailer extends Component {
                 return response.json();      
             })
             .then(result => { 
-                this.setState({ key: result.results[1].key });
+                this.setState({ key: result.results[0].key });
             })
     }
 

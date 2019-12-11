@@ -18,6 +18,7 @@ const Hero = ({ image, text, title, movieId, clickable, movieName, trailer, ...p
         { console.log(props)}
         <div className="hero-content">
             <div className="hero-text">
+                <p className="red-title">Trending</p>
                 <h1>{title}</h1>
                 <p>{text}</p>
                 <p>{trailer}</p>

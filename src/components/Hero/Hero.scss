@@ -21,6 +21,12 @@
                 }
             }
             
+            .red-title {
+                font-size: 2rem;
+                color: $red;
+                margin-bottom: 0.2rem !important;
+            }
+            
             @media screen and (max-width: 720px) {
                 .hero {
                     background-position: center center !important;
