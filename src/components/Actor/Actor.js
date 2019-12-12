@@ -2,6 +2,7 @@ import React from 'react';
 import { IMAGE_BASE_URL } from '../../config';
 import PropTypes from 'prop-types';
 import './Actor.scss';
+import ActorInfo from './ActorInfo';
 
 const Actor = ({ actor }) => {
 
@@ -16,7 +17,9 @@ const Actor = ({ actor }) => {
             <div className="actor-info">
                 <span className="actor-name">{actor.name}</span>
                 <span className="actor-character">{actor.character}</span>
+                <div className="more-info"><ActorInfo actorId={actor.id} /></div>
             </div>
+            
         </div>
         
     )

@@ -1,33 +1,39 @@
             .actor,
             .director {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
                 img {
                     height: auto;
-                    max-height: 200px;
-                    max-width: 100px;
+                    width: 205px;
+                    max-width: 100%;
                     margin: auto;
                 }
                 &-info {
                     display: flex;
                     flex-direction: column;
-                    max-width: 200px;
-                    margin: auto;
+                    max-width: 205px;
+                    // margin: auto;
+                    .more-info {
+                        margin: 1rem 0;
+                    }
                 }
                 .actor-name,
                 .director-name {
                     font-size: 1.5rem;
                     color: #fff;
                     float: left;
-                    margin: 10px 20px;
+                    margin: 10px 0;
                     box-sizing: border-box;
                     text-align: left;
+                    width: 205px;
                 }
                 .actor-character,
                 .director-character {
                     font-size: 15px;
                     color: #fff;
                     float: left;
-                    margin: 0 20px 10px 20px;
+                    margin: 0;
                     box-sizing: border-box;
                 }
             }
@@ -37,7 +43,7 @@
                 .director {
                     flex-direction: column;
                     img {
-                        max-height: 200px;
+                        max-height: auto;
                     }
                 }
             }

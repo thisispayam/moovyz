@@ -28,7 +28,7 @@ class Trailer extends Component {
         return (
             <div className="trailer-frame">  
                 <h1>TRAILER</h1>         
-                <iframe title="trailerFrame" width="100%" height="415" src={`https://www.youtube.com/embed/${key}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe title="trailerFrame" width="100%" height="515" src={`https://www.youtube.com/embed/${key}`} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 {loading ? <Spinner /> : null}
             </div>
         )
